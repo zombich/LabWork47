@@ -1,0 +1,41 @@
+﻿<Window x:Class="LabWork47.Task2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabWork47"
+        mc:Ignorable="d"
+        Title="Task2" Height="450" Width="800" Loaded="Window_Loaded" FontSize="18">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Expander Header="Games">
+            <StackPanel>
+                <DataGrid x:Name="GamesDataGrid" FontSize="14"/>
+                <Button Content="Update Table" Click="UpdateTableButton_Click"/>
+            </StackPanel>
+        </Expander>
+        <StackPanel>
+            <Label Content="Id"/>
+            <TextBox x:Name="IdTextBox"/>
+            <Label Content="Title"/>
+            <TextBox x:Name="TitleTextBox"/>
+            <Label Content="Description"/>
+            <TextBox x:Name="DescriptionTextBox"/>
+            <Label Content="Price"/>
+            <TextBox x:Name="PriceTextBox"/>
+            <Label Content="PublicationYear"/>
+            <TextBox x:Name="PublicationYearTextBox"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="GetById" Click="GetByIdButton_Click"/>
+            <Button Content="Create" Click="CreateButton_Click"/>
+            <Button Content="Update" Click="UpdateButton_Click"/>
+            <Button Content="Delete" Click="DeleteButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
