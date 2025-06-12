@@ -21,13 +21,6 @@ namespace LabWork47
         {
             InitializeComponent();
         }
-        private void Task1Button_Click(object sender, RoutedEventArgs e)
-        {
-            Task1 task = new();
-            Hide();
-            task.ShowDialog();
-            Show();
-        }
 
         private void Task2Button_Click(object sender, RoutedEventArgs e)
         {
@@ -37,13 +30,6 @@ namespace LabWork47
             Show();
         }
 
-        private void Task3Button_Click(object sender, RoutedEventArgs e)
-        {
-            Task3 task = new();
-            Hide();
-            task.ShowDialog();
-            Show();
-        }
 
         private void Task4Button_Click(object sender, RoutedEventArgs e)
         {

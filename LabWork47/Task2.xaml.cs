@@ -1,19 +1,7 @@
 ﻿using Database.Database;
 using Database.Models;
 using Database.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace LabWork47
 {
@@ -23,7 +11,9 @@ namespace LabWork47
     public partial class Task2 : Window
     {
         public static IDatabaseFactory factory = new MsSqlFactory("Data Source=zombatka;Integrated Security=True;Trust Server Certificate=True");
+
         public static GamesRepository repository = new(factory);
+
         public Task2()
         {
             InitializeComponent();
@@ -37,7 +27,7 @@ namespace LabWork47
         private void GetByIdButton_Click(object sender, RoutedEventArgs e)
         {
             int id;
-            if(!int.TryParse(IdTextBox.Text, out id))
+            if (!int.TryParse(IdTextBox.Text, out id))
                 return;
 
             var game = repository.GetById(id);
@@ -72,8 +62,8 @@ namespace LabWork47
                 PublicationYear = publicationYear,
                 Description = DescriptionTextBox.Text,
                 Title = TitleTextBox.Text,
-            }; 
-            
+            };
+
             repository.Create(game);
 
             MessageBox.Show($@"Успешно создано",

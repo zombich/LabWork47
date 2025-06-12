@@ -14,9 +14,7 @@
         </Style>
     </Window.Resources>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button Content="Task1" Click="Task1Button_Click"/>
         <Button Content="Task2" Click="Task2Button_Click"/>
-        <Button Content="Task3" Click="Task3Button_Click"/>
         <Button Content="Task4" Click="Task4Button_Click"/>
     </StackPanel>
 </Window>

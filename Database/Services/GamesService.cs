@@ -1,7 +1,7 @@
 ﻿using Database.Models;
 using Database.Repositories;
 
-namespace Database
+namespace Database.Services
 {
     public class GamesService(GamesRepository repository)
     {
@@ -73,6 +73,6 @@ namespace Database
         => publicationYear > 1900;
 
         public bool CheckTitle(string title)
-        => title != String.Empty;
+        => title != string.Empty;
     }
 }
